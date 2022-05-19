@@ -5,7 +5,7 @@ from sys import exit
 from pygame import mixer
 
 mixer.init()
-mixer.music.load('music/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 1.wav')
+mixer.music.load('music/Juhani Junkala [Retro Game Music Pack] Level 1.wav')
 mixer.music.set_volume(0.05)
 mixer.music.play(-1)
 
@@ -16,18 +16,18 @@ class SNAKE:
         self.direction = Vector2(0, 0)
         self.new_block = False
 
-        self.head_up = pygame.image.load('images/snake_game_graphic/head_up.png').convert_alpha()
-        self.head_down = pygame.image.load('images/snake_game_graphic/head_down.png').convert_alpha()
-        self.head_right = pygame.image.load('images/snake_game_graphic/head_right.png').convert_alpha()
-        self.head_left = pygame.image.load('images/snake_game_graphic/head_left.png').convert_alpha()
+        self.head_up = pygame.image.load('images/head_up.png').convert_alpha()
+        self.head_down = pygame.image.load('images/head_down.png').convert_alpha()
+        self.head_right = pygame.image.load('images/head_right.png').convert_alpha()
+        self.head_left = pygame.image.load('images/head_left.png').convert_alpha()
 
-        self.body_tr = pygame.image.load('images/snake_game_graphic/body_tr.png').convert_alpha()
-        self.body_tl = pygame.image.load('images/snake_game_graphic/body_tl.png').convert_alpha()
-        self.body_br = pygame.image.load('images/snake_game_graphic/body_br.png').convert_alpha()
-        self.body_bl = pygame.image.load('images/snake_game_graphic/body_bl.png').convert_alpha()
+        self.body_tr = pygame.image.load('images/body_tr.png').convert_alpha()
+        self.body_tl = pygame.image.load('images/body_tl.png').convert_alpha()
+        self.body_br = pygame.image.load('images/body_br.png').convert_alpha()
+        self.body_bl = pygame.image.load('images/body_bl.png').convert_alpha()
 
-        self.body_ver = pygame.image.load('images/snake_game_graphic/body_vertical.png').convert_alpha()
-        self.body_hor = pygame.image.load('images/snake_game_graphic/body_horizontal.png').convert_alpha()
+        self.body_ver = pygame.image.load('images/body_vertical.png').convert_alpha()
+        self.body_hor = pygame.image.load('images/body_horizontal.png').convert_alpha()
 
     def make_snake(self):
         self.update_head_direct()
@@ -217,7 +217,7 @@ pygame.display.set_caption('Snake Game')
 # clock object to set frame rate
 clock = pygame.time.Clock()
 
-target = pygame.image.load('images/snake_game_graphic/apple.png').convert_alpha()
+target = pygame.image.load('images/apple.png').convert_alpha()
 
 game_font = pygame.font.SysFont('Times', 25)
 main_game = MAIN()
