@@ -4,18 +4,23 @@ from pygame.math import Vector2
 from sys import exit
 from pygame import mixer
 
+# import background music
 mixer.init()
 mixer.music.load('music/Juhani Junkala [Retro Game Music Pack] Level 1.wav')
+# setting music volume
 mixer.music.set_volume(0.05)
+# "-1" --- keep looping the song until quit game
 mixer.music.play(-1)
 
 
 class SNAKE:
     def __init__(self):
+        # setting snake initial position on the game board
         self.body = [Vector2(5, 10), Vector2(4, 10), Vector2(3, 10)]
         self.direction = Vector2(0, 0)
         self.new_block = False
 
+        # import all snake graphics
         self.head_up = pygame.image.load('images/head_up.png').convert_alpha()
         self.head_down = pygame.image.load('images/head_down.png').convert_alpha()
         self.head_right = pygame.image.load('images/head_right.png').convert_alpha()
@@ -30,23 +35,30 @@ class SNAKE:
         self.body_hor = pygame.image.load('images/body_horizontal.png').convert_alpha()
 
     def make_snake(self):
+        # update snake head graphic under different directions
         self.update_head_direct()
 
+        # create snake body parts
         for index, block in enumerate(self.body):
             x_pos = block.x * cell_size
             y_pos = block.y * cell_size
             block_rect = pygame.Rect(x_pos, y_pos, cell_size, cell_size)
 
+            # when index is zero, indicating it is the head of snake
             if index == 0:
                 screen.blit(self.head, block_rect)
+            # building snake body
             elif index != 0 and index != len(self.body) - 1:
                 prev_block = self.body[index+1] - block
                 next_block = self.body[index-1] - block
+                # both body block is on the same vertical path
                 if prev_block.x == next_block.x:
                     screen.blit(self.body_ver, block_rect)
+                # both body block is on the same horizontal path
                 elif prev_block.y == next_block.y:
                     screen.blit(self.body_hor, block_rect)
                 else:
+                    # when snake body making turns through corners
                     if prev_block.x == -1 and next_block.y == -1 or prev_block.y == -1 and next_block.x == -1:
                         screen.blit(self.body_tl, block_rect)
                     elif prev_block.x == -1 and next_block.y == 1 or prev_block.y == 1 and next_block.x == -1:
@@ -112,6 +124,7 @@ class MAIN:
         self.check_game_over()
 
     def track_max(self):
+        # using an external txt file to keep track of the highest score
         with open("highest_score.txt", "r") as f:
             return f.read()
 
@@ -156,6 +169,7 @@ class MAIN:
         screen.blit(target, target_rect)
 
         current_score = len(self.snake.body) - 3
+        # compare the highest score and current score, update it if current score > highest
         try:
             max_score = int(self.track_max())
         except:
@@ -185,8 +199,10 @@ class MAIN:
                         pygame.draw.rect(screen, grass_color, grass_rect)
 
     def paused(self):
+        # adding a paused function into the game
         paused = True
         while paused:
+            # capturing all the event during paused
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -197,7 +213,7 @@ class MAIN:
                     elif event.key == pygame.K_q:
                         pygame.quit()
                         exit()
-
+            # during paused, display information on the screen to guide player
             screen.fill((255, 255, 235))
             text = "GAME PAUSED\
             Press P or C to play\
@@ -213,10 +229,12 @@ pygame.init()
 cell_size = 40
 cell_number = 20
 screen = pygame.display.set_mode((cell_number*cell_size, cell_number*cell_size))  # width,height
+# title of game
 pygame.display.set_caption('Snake Game')
 # clock object to set frame rate
 clock = pygame.time.Clock()
 
+# import the apple graphic
 target = pygame.image.load('images/apple.png').convert_alpha()
 
 game_font = pygame.font.SysFont('Times', 25)
