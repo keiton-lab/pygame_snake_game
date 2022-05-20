@@ -9,4 +9,4 @@ To make the original game more enjoyable and compeleted, I developed the followi
   2. A "PAUSED" feature to stop the game, and resume or quit if needed
   3. A method that keep track of the highest score in game (lower righthand corner)
 
-This snake game is inspired by and developed based on https://github.com/clear-code-projects/Snake
+This snake game is inspired by the Clear Code: https://www.youtube.com/watch?v=QFvqStqPCRU&t=6246s&ab_channel=ClearCode
