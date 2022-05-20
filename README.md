@@ -6,7 +6,12 @@
 
 To make the original game more enjoyable and compeleted, I developed the following features/method in the code:
   1. Added background music during the entire game
-  2. A "PAUSED" feature to stop the game, and resume or quit if needed
-  3. A method that keep track of the highest score in game (lower righthand corner)
+      
+      ** can only be heard in game.
+  3. A "PAUSED" feature to stop the game, and resume or quit if needed
+  ![](screenshots/paused_screen.png)
+  5. A method that keep track of the highest score in game (lower righthand corner)
+  
+      ![](screenshots/highest_screen.png)
 
 This snake game is inspired by the Clear Code: https://www.youtube.com/watch?v=QFvqStqPCRU&t=6246s&ab_channel=ClearCode
