@@ -5,18 +5,18 @@
 ### The objective of this project is for me to learn pygame and improve my programing skill. 
 
 To make the original game more enjoyable and compeleted, I developed the following features/method in the code:
-  1. Added background music during the entire game
-      
+   1. Added background music during the entire game
       ** can only be heard in game.
-  2. A "PAUSED" feature to stop the game, and resume or quit if needed
+      
+   2. A "PAUSED" feature to stop the game, and resume or quit if needed
    <img src="screenshots/paused_screen.png" width="400">
-   <img src="screenshots/paused_code.png" width="400")
-
-  3. A method that keep track of the highest score in game (lower righthand corner)
+   <img src="screenshots/paused_code.png" width="400">
         
-  <img src="screenshots/track_max_2.png" width="400">
-  <img src="screenshots/highest_screen.png" width="400" height="250">
-  <img src="screenshots/track_max_1.png" width="400">
+   3. A method that keep track of the highest score in game (lower righthand corner)
+        
+   <img src="screenshots/track_max_2.png" width="400">
+   <img src="screenshots/highest_screen.png" width="400" height="250">
+   <img src="screenshots/track_max_1.png" width="400">
 
 ### How to play
    ---- run " python snake_game.py " on cmd.
