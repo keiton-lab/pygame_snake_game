@@ -158,7 +158,7 @@ class MAIN:
 
     def score_board(self):
         score_text = ": " + str(len(self.snake.body) - 3)
-        score_surf = game_font.render(score_text, True, (56, 74, 22))
+        score_surf = game_font_1.render(score_text, True, (56, 74, 22))
         score_x = cell_size * cell_number - 60
         score_y = cell_size * cell_number - 40
 
@@ -179,7 +179,7 @@ class MAIN:
         with open("highest_score.txt", "w") as f:
             f.write(str(max_score))
         max_text = "Highest: " + str(max_score)
-        max_surf = game_font.render(max_text, True, (56, 74, 22))
+        max_surf = game_font_1.render(max_text, True, (56, 74, 22))
         max_rect = max_surf.get_rect(center=(score_x - 30, score_y - 40))
 
         screen.blit(max_surf, max_rect)
@@ -214,13 +214,24 @@ class MAIN:
                         pygame.quit()
                         exit()
             # during paused, display information on the screen to guide player
-            screen.fill((255, 255, 235))
-            text = "GAME PAUSED\
-            Press P or C to play\
-            Press Q to quit game"
-            text_surf = game_font.render(text, True, (0, 0, 0))
-            text_rect = text_surf.get_rect(center=(400, 300))
-            screen.blit(text_surf, text_rect)
+            # below is to add background during game paused
+            # screen.fill((255, 255, 235))
+            text_1 = "GAME PAUSED"
+            text_2 = "Press  Q  to quit game"
+            text_3 = "Press  P  or  C  to resume game"
+
+            text_surf_1 = game_font_2.render(text_1, True, (0, 0, 0))
+            text_surf_2 = game_font_1.render(text_2, True, (0, 0, 0))
+            text_surf_3 = game_font_1.render(text_3, True, (0, 0, 0))
+
+            text_rect_1 = text_surf_1.get_rect(center=(400, 260))
+            text_rect_2 = text_surf_2.get_rect(center=(400, 375))
+            text_rect_3 = text_surf_3.get_rect(center=(400, 455))
+
+            screen.blit(text_surf_1, text_rect_1)
+            screen.blit(text_surf_2, text_rect_2)
+            screen.blit(text_surf_3, text_rect_3)
+
             pygame.display.update()
             clock.tick(10)
 
@@ -237,7 +248,9 @@ clock = pygame.time.Clock()
 # import the apple graphic
 target = pygame.image.load('images/apple.png').convert_alpha()
 
-game_font = pygame.font.SysFont('Times', 25)
+game_font_1 = pygame.font.SysFont('Times', 25)
+game_font_2 = pygame.font.SysFont('Times', 40)
+
 main_game = MAIN()
 screen_update = pygame.USEREVENT
 pygame.time.set_timer(screen_update, 100)
