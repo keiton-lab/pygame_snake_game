@@ -25,6 +25,10 @@ To make the original game more enjoyable and compeleted, I developed the followi
 
 ### How to reset the highest score
    1. Go into highest_score.txt, delete everything, and then type "0" (zero) and save the file.
-
+\
+\
+\
+** 
 This snake game is inspired by the Clear Code: 
 https://www.youtube.com/watch?v=QFvqStqPCRU&t=6246s&ab_channel=ClearCode
+
