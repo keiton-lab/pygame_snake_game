@@ -10,9 +10,13 @@ To make the original game more enjoyable and compeleted, I developed the followi
       ** can only be heard in game.
   2. A "PAUSED" feature to stop the game, and resume or quit if needed
   ![](screenshots/paused_screen.png)
+  ![](screenshots/paused_code.png)
+
   3. A method that keep track of the highest score in game (lower righthand corner)
-  
+      ![](screenshots/track_max_2.png)
       ![](screenshots/highest_screen.png)
+      ![](screenshots/track_max_1.png)
+   
 
 ### How to play
    ---- run " python snake_game.py " on cmd.
