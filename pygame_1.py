@@ -239,20 +239,27 @@ class MAIN:
 pygame.init()
 cell_size = 40
 cell_number = 20
-screen = pygame.display.set_mode((cell_number*cell_size, cell_number*cell_size))  # width,height
+
+# the window size of the game (width, height)
+screen = pygame.display.set_mode((cell_number*cell_size, cell_number*cell_size))
 # title of game
 pygame.display.set_caption('Snake Game')
+
 # clock object to set frame rate
 clock = pygame.time.Clock()
 
 # import the apple graphic
 target = pygame.image.load('images/apple.png').convert_alpha()
 
+# setting the text font in the game
 game_font_1 = pygame.font.SysFont('Times', 25)
 game_font_2 = pygame.font.SysFont('Times', 40)
 
 main_game = MAIN()
 screen_update = pygame.USEREVENT
+
+# timer: visually it determines how fast the snake moves, the lower the number, the faster the snake moves
+# default is 100
 pygame.time.set_timer(screen_update, 100)
 
 
@@ -278,4 +285,5 @@ while True:
     screen.fill((122, 163, 134))
     main_game.draw_element()
     pygame.display.update()
-    clock.tick(60)  # set the max frame rate = 60fps
+    # set the max frame rate = 60fps
+    clock.tick(60)
