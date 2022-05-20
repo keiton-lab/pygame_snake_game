@@ -14,4 +14,5 @@ To make the original game more enjoyable and compeleted, I developed the followi
   
       ![](screenshots/highest_screen.png)
 
-This snake game is inspired by the Clear Code: https://www.youtube.com/watch?v=QFvqStqPCRU&t=6246s&ab_channel=ClearCode
+This snake game is inspired by the Clear Code: 
+https://www.youtube.com/watch?v=QFvqStqPCRU&t=6246s&ab_channel=ClearCode
