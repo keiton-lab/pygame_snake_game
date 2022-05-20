@@ -1,4 +1,4 @@
-CLICK TO SEE DEMO:
+CLICK HERE TO SEE DEMO:
 
 This snake game is developed based on ....
 To make this game more enjoyable and more compeleted, following features were developed:
