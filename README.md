@@ -6,7 +6,7 @@
 
 To make the original game more enjoyable and compeleted, I developed the following features/method in the code:
    1. Added background music during the entire game
-      ** can only be heard in game.
+      <br />** can only be heard in game.
       
    2. A "PAUSED" feature to stop the game, and resume or quit if needed
    <img src="screenshots/paused_screen.png" width="400">
