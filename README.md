@@ -4,15 +4,15 @@
 ### This is my second personal project.
 ### The objective of this project is for me to learn pygame and improve my programing skill. 
 
-To make the original game more enjoyable and compeleted, I developed the following features/method in the code:
+**There are many snake game tutorials on Youtube and Github, however I could not find one that will give user a more completed gaming experience.**
+
+To make the original game more enjoyable and compeleted, I build the following features/method:
    1. Added background music during the entire game
       <br />** can only be heard in game.
-      
    2. A "PAUSED" feature to stop the game, and resume or quit if needed
+   3. A method that keep track of the highest score in game (lower righthand corner)
    <img src="screenshots/paused_screen.png" width="400">
    <img src="screenshots/paused_code.png" width="400">
-        
-   3. A method that keep track of the highest score in game (lower righthand corner)
         
    <img src="screenshots/track_max_2.png" width="400">
    <img src="screenshots/highest_screen.png" width="400" height="250">
@@ -25,10 +25,10 @@ To make the original game more enjoyable and compeleted, I developed the followi
 
 ### How to reset the highest score
    1. Go into highest_score.txt, delete everything, and then type "0" (zero) and save the file.
-\
-\
-\
-** 
-This snake game is inspired by the Clear Code: 
-https://www.youtube.com/watch?v=QFvqStqPCRU&t=6246s&ab_channel=ClearCode
+<br />
+<br />
+<br />
 
+** 
+One of the snake game tutorials inspried me and I recommend to try out:
+https://www.youtube.com/watch?v=QFvqStqPCRU&ab_channel=ClearCode
