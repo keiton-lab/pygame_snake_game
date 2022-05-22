@@ -4,6 +4,26 @@ from pygame.math import Vector2
 from sys import exit
 from pygame import mixer
 
+pygame.init()
+# the game board is a grid, each row and each cols has the same number of cell
+cell_size = 40
+cell_number = 20
+
+# set the window size of the game (width, height)
+screen = pygame.display.set_mode((cell_number*cell_size, cell_number*cell_size))
+# set title of game
+pygame.display.set_caption('Snake Game')
+
+# clock object to set frame rate
+clock = pygame.time.Clock()
+
+# import the apple graphic
+target = pygame.image.load('images/apple.png').convert_alpha()
+
+# setting the text font in the game
+game_font_1 = pygame.font.SysFont('Times', 25)
+game_font_2 = pygame.font.SysFont('Times', 40)
+
 # import background music
 mixer.init()
 mixer.music.load('music/Juhani Junkala [Retro Game Music Pack] Level 1.wav')
@@ -236,28 +256,8 @@ class MAIN:
             clock.tick(10)
 
 
-pygame.init()
-cell_size = 40
-cell_number = 20
-
-# the window size of the game (width, height)
-screen = pygame.display.set_mode((cell_number*cell_size, cell_number*cell_size))
-# title of game
-pygame.display.set_caption('Snake Game')
-
-# clock object to set frame rate
-clock = pygame.time.Clock()
-
-# import the apple graphic
-target = pygame.image.load('images/apple.png').convert_alpha()
-
-# setting the text font in the game
-game_font_1 = pygame.font.SysFont('Times', 25)
-game_font_2 = pygame.font.SysFont('Times', 40)
-
 main_game = MAIN()
 screen_update = pygame.USEREVENT
-
 # timer: visually it determines how fast the snake moves, the lower the number, the faster the snake moves
 # default is 100
 pygame.time.set_timer(screen_update, 100)
