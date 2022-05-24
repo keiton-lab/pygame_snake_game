@@ -1,5 +1,5 @@
 ## CLICK HERE TO SEE DEMO: https://youtube.com/shorts/DWpSr7d1qMY?feature=share
-    ** the background music was not recorded in the video. 
+    ** background music was not recorded in the video. 
 
 ### This is my second personal project.
 ### The objective of this project is for me to learn pygame and improve my programing skill. 
