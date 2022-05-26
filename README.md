@@ -4,7 +4,7 @@
 ### This is my second personal project.
 ### The objective of this project is for me to learn pygame and improve my programing skill. 
 
-**There are many snake game tutorials on Youtube and Github, however I could not find one that will give user a more completed gaming experience.**
+**There are many snake game tutorials on Youtube and Github, however I could not find one that will give user a more completed gaming experience.So I decided to develop a better version of snake game.**
 
 To make the original game more enjoyable and compeleted, I build the following features/method:
    1. Added background music during the entire game
