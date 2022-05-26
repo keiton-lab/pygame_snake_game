@@ -30,5 +30,5 @@ To make the original game more enjoyable and compeleted, I build the following f
 <br />
 
 ** 
-One of the snake game tutorials inspried me and I recommend to try out:
+One of the snake game tutorials that inspried me and I recommend to try out and develop upon:
 https://www.youtube.com/watch?v=QFvqStqPCRU&ab_channel=ClearCode
